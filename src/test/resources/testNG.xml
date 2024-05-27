@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Unit Tests" configfailurepolicy="continue">
+    <!-- Tests for Chrome browser -->
+    <test name="Chrome Tests">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="testSuite.TestInteractWithInputAndButtonFieldsSuite" />
+            <class name="testSuite.TestInteractWithSelectAndAlertFieldsSuite" />
+            <class name="testSuite.TestInteractWithFramesAndIframeFieldsSuite"/>
+
+        </classes>
+    </test>
+
+    <!-- Tests for Firefox browser -->
+    <test name="Firefox Tests">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="testSuite.TestInteractWithInputAndButtonFieldsSuite" />
+            <class name="testSuite.TestInteractWithSelectAndAlertFieldsSuite" />
+            <class name="testSuite.TestInteractWithFramesAndIframeFieldsSuite"/>
+        </classes>
+    </test>
+</suite>

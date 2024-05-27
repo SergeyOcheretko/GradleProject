@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="14" passed="13" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-21T13:32:25 EEST" name="SuiteFortestSuite.TestInteractWithInputAndButtonFieldsSuite" finished-at="2024-05-21T13:32:46 EEST" duration-ms="21628">
+    <groups>
+    </groups>
+    <test started-at="2024-05-21T13:32:25 EEST" name="testSuite.TestInteractWithInputAndButtonFieldsSuite" finished-at="2024-05-21T13:32:46 EEST" duration-ms="21628">
+      <class name="testSuite.TestInteractWithInputAndButtonFieldsSuite">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:testSuite.TestInteractWithInputAndButtonFieldsSuite@f0c8a99]" started-at="2024-05-21T13:32:25 EEST" name="beforeTest" finished-at="2024-05-21T13:32:32 EEST" duration-ms="6781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="setUpBeforeClassInputAndButton()[pri:0, instance:testSuite.TestInteractWithInputAndButtonFieldsSuite@f0c8a99]" started-at="2024-05-21T13:32:32 EEST" name="setUpBeforeClassInputAndButton" finished-at="2024-05-21T13:32:32 EEST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClassInputAndButton -->
+        <test-method signature="interactWithButtonPage()[pri:0, instance:testSuite.TestInteractWithInputAndButtonFieldsSuite@f0c8a99]" started-at="2024-05-21T13:32:32 EEST" name="interactWithButtonPage" description="Working with Button page" finished-at="2024-05-21T13:32:37 EEST" duration-ms="5472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- interactWithButtonPage -->
+        <test-method signature="interactWithinputPage()[pri:0, instance:testSuite.TestInteractWithInputAndButtonFieldsSuite@f0c8a99]" started-at="2024-05-21T13:32:37 EEST" name="interactWithinputPage" description="Working with Input page" finished-at="2024-05-21T13:32:40 EEST" duration-ms="3063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- interactWithinputPage -->
+        <test-method signature="openButtonPage()[pri:0, instance:testSuite.TestInteractWithInputAndButtonFieldsSuite@f0c8a99]" started-at="2024-05-21T13:32:40 EEST" name="openButtonPage" description="Open Button Page" finished-at="2024-05-21T13:32:43 EEST" duration-ms="2178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openButtonPage -->
+        <test-method signature="openInputPage()[pri:0, instance:testSuite.TestInteractWithInputAndButtonFieldsSuite@f0c8a99]" started-at="2024-05-21T13:32:43 EEST" name="openInputPage" description="Open Input Page" finished-at="2024-05-21T13:32:44 EEST" duration-ms="1648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openInputPage -->
+        <test-method signature="openLetcodePage()[pri:0, instance:testSuite.TestInteractWithInputAndButtonFieldsSuite@f0c8a99]" started-at="2024-05-21T13:32:44 EEST" name="openLetcodePage" description="РћС‚РєСЂС‹С‚РёРµ СЃС‚СЂР°РЅРёС†С‹ Letcode" finished-at="2024-05-21T13:32:46 EEST" duration-ms="1540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLetcodePage -->
+        <test-method is-config="true" signature="shutsDownTheBrowser()[pri:0, instance:testSuite.TestInteractWithInputAndButtonFieldsSuite@f0c8a99]" started-at="2024-05-21T13:32:46 EEST" name="shutsDownTheBrowser" finished-at="2024-05-21T13:32:46 EEST" duration-ms="766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutsDownTheBrowser -->
+      </class> <!-- testSuite.TestInteractWithInputAndButtonFieldsSuite -->
+    </test> <!-- testSuite.TestInteractWithInputAndButtonFieldsSuite -->
+  </suite> <!-- SuiteFortestSuite.TestInteractWithInputAndButtonFieldsSuite -->
+  <suite started-at="2024-05-21T13:33:15 EEST" name="SuiteFortestSuite.TestInteractWithFramesAndIframeFieldsSuite" finished-at="2024-05-21T13:33:36 EEST" duration-ms="20645">
+    <groups>
+    </groups>
+    <test started-at="2024-05-21T13:33:15 EEST" name="testSuite.TestInteractWithFramesAndIframeFieldsSuite" finished-at="2024-05-21T13:33:36 EEST" duration-ms="20645">
+      <class name="testSuite.TestInteractWithFramesAndIframeFieldsSuite">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:testSuite.TestInteractWithFramesAndIframeFieldsSuite@48bb62]" started-at="2024-05-21T13:33:15 EEST" name="beforeTest" finished-at="2024-05-21T13:33:26 EEST" duration-ms="10477" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="setUpBeforeClassInputAndButton()[pri:0, instance:testSuite.TestInteractWithFramesAndIframeFieldsSuite@48bb62]" started-at="2024-05-21T13:33:26 EEST" name="setUpBeforeClassInputAndButton" finished-at="2024-05-21T13:33:26 EEST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClassInputAndButton -->
+        <test-method signature="openFramePage()[pri:0, instance:testSuite.TestInteractWithFramesAndIframeFieldsSuite@48bb62]" started-at="2024-05-21T13:33:26 EEST" name="openFramePage" description="Open Frame Pages" finished-at="2024-05-21T13:33:29 EEST" duration-ms="3454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openFramePage -->
+        <test-method signature="openRadioCheckboxPage()[pri:0, instance:testSuite.TestInteractWithFramesAndIframeFieldsSuite@48bb62]" started-at="2024-05-21T13:33:29 EEST" name="openRadioCheckboxPage" description="Open Radio &amp; Checkbox page" finished-at="2024-05-21T13:33:31 EEST" duration-ms="1499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openRadioCheckboxPage -->
+        <test-method signature="testingFramePage()[pri:0, instance:testSuite.TestInteractWithFramesAndIframeFieldsSuite@48bb62]" started-at="2024-05-21T13:33:31 EEST" name="testingFramePage" description="Testing Frame page" finished-at="2024-05-21T13:33:33 EEST" duration-ms="2978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingFramePage -->
+        <test-method signature="testingRadioCheckboxPage()[pri:0, instance:testSuite.TestInteractWithFramesAndIframeFieldsSuite@48bb62]" started-at="2024-05-21T13:33:33 EEST" name="testingRadioCheckboxPage" description="Testing Radio &amp; Checkbox page" finished-at="2024-05-21T13:33:35 EEST" duration-ms="1664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingRadioCheckboxPage -->
+        <test-method is-config="true" signature="shutsDownTheBrowser()[pri:0, instance:testSuite.TestInteractWithFramesAndIframeFieldsSuite@48bb62]" started-at="2024-05-21T13:33:35 EEST" name="shutsDownTheBrowser" finished-at="2024-05-21T13:33:36 EEST" duration-ms="552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutsDownTheBrowser -->
+      </class> <!-- testSuite.TestInteractWithFramesAndIframeFieldsSuite -->
+    </test> <!-- testSuite.TestInteractWithFramesAndIframeFieldsSuite -->
+  </suite> <!-- SuiteFortestSuite.TestInteractWithFramesAndIframeFieldsSuite -->
+  <suite started-at="2024-05-21T13:32:47 EEST" name="SuiteFortestSuite.TestInteractWithSelectAndAlertFieldsSuite" finished-at="2024-05-21T13:33:15 EEST" duration-ms="28493">
+    <groups>
+    </groups>
+    <test started-at="2024-05-21T13:32:47 EEST" name="testSuite.TestInteractWithSelectAndAlertFieldsSuite" finished-at="2024-05-21T13:33:15 EEST" duration-ms="28493">
+      <class name="testSuite.TestInteractWithSelectAndAlertFieldsSuite">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:testSuite.TestInteractWithSelectAndAlertFieldsSuite@645aa696]" started-at="2024-05-21T13:32:47 EEST" name="beforeTest" finished-at="2024-05-21T13:32:53 EEST" duration-ms="6193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="setUpBeforeClassSelectAndAlert()[pri:0, instance:testSuite.TestInteractWithSelectAndAlertFieldsSuite@645aa696]" started-at="2024-05-21T13:32:53 EEST" name="setUpBeforeClassSelectAndAlert" finished-at="2024-05-21T13:32:53 EEST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClassSelectAndAlert -->
+        <test-method signature="openDialogPage()[pri:0, instance:testSuite.TestInteractWithSelectAndAlertFieldsSuite@645aa696]" started-at="2024-05-21T13:32:53 EEST" name="openDialogPage" description="Open Alert Page" finished-at="2024-05-21T13:32:56 EEST" duration-ms="3159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDialogPage -->
+        <test-method signature="openLetcodePage()[pri:0, instance:testSuite.TestInteractWithSelectAndAlertFieldsSuite@645aa696]" started-at="2024-05-21T13:32:56 EEST" name="openLetcodePage" description="РћС‚РєСЂС‹С‚РёРµ СЃС‚СЂР°РЅРёС†С‹ Letcode" finished-at="2024-05-21T13:32:58 EEST" duration-ms="1790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openLetcodePage -->
+        <test-method signature="openSelectPage()[pri:0, instance:testSuite.TestInteractWithSelectAndAlertFieldsSuite@645aa696]" started-at="2024-05-21T13:32:58 EEST" name="openSelectPage" description="Open Drop-Down Page" finished-at="2024-05-21T13:32:59 EEST" duration-ms="1556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openSelectPage -->
+        <test-method signature="testingAlertPage()[pri:0, instance:testSuite.TestInteractWithSelectAndAlertFieldsSuite@645aa696]" started-at="2024-05-21T13:32:59 EEST" name="testingAlertPage" description="Testing Alert page" finished-at="2024-05-21T13:33:08 EEST" duration-ms="8266" status="FAIL">
+          <exception class="com.codeborne.selenide.ex.InvalidStateException">
+            <message>
+              <![CDATA[Invalid element state [By.id: modern]: element click intercepted: Element <button id="modern" class="button is-success">...</button> is not clickable at point (176, 20). Other element would receive the click: <a _ngcontent-serverapp-c98="" routerlinkactive="is-tab" routerlink="/test" id="testing" class="navbar-item" href="/test">...</a>
+Screenshot: file:/C:/Users/Sergey/IdeaProjects/GradleProject/build/reports/tests/1716287587385.0.png
+Page source: file:/C:/Users/Sergey/IdeaProjects/GradleProject/build/reports/tests/1716287587385.0.html
+Timeout: 5 s.
+Caused by: ElementClickInterceptedException: element click intercepted: Element <button id="modern" class="button is-success">...</button> is not clickable at point (176, 20). Other element would receive the click: <a _ngcontent-serverapp-c98="" routerlinkactive="is-tab" routerlink="/test" id="testing" class="navbar-item" href="/test">...</a>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Invalid element state [By.id: modern]: element click intercepted: Element <button id="modern" class="button is-success">...</button> is not clickable at point (176, 20). Other element would receive the click: <a _ngcontent-serverapp-c98="" routerlinkactive="is-tab" routerlink="/test" id="testing" class="navbar-item" href="/test">...</a>
+Screenshot: file:/C:/Users/Sergey/IdeaProjects/GradleProject/build/reports/tests/1716287587385.0.png
+Page source: file:/C:/Users/Sergey/IdeaProjects/GradleProject/build/reports/tests/1716287587385.0.html
+Timeout: 5 s.
+Caused by: ElementClickInterceptedException: element click intercepted: Element <button id="modern" class="button is-success">...</button> is not clickable at point (176, 20). Other element would receive the click: <a _ngcontent-serverapp-c98="" routerlinkactive="is-tab" routerlink="/test" id="testing" class="navbar-item" href="/test">...</a>
+at com.codeborne.selenide.impl.ExceptionWrapper.wrap(ExceptionWrapper.java:26)
+at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:154)
+at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+at com.sun.proxy.$Proxy16.click(Unknown Source)
+at pages.InteractWithSelectAndAlertFieldsPage.sweetAlert(InteractWithSelectAndAlertFieldsPage.java:83)
+at testSuite.TestInteractWithSelectAndAlertFieldsSuite.testingAlertPage(TestInteractWithSelectAndAlertFieldsSuite.java:57)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at testRunner.Runner.main(Runner.java:30)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button id="modern" class="button is-success">...</button> is not clickable at point (176, 20). Other element would receive the click: <a _ngcontent-serverapp-c98="" routerlinkactive="is-tab" routerlink="/test" id="testing" class="navbar-item" href="/test">...</a>
+  (Session info: chrome=125.0.6422.60)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ea8ffae702b9942895b442f0e152de02, clickElement {id=f.1809FB87F06B358704C3274C3BCC8176.d.42496EF132EAF2C8CABF4CE9243D2B25.e.182}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 125.0.6422.60, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: C:\Users\Sergey\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38640}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:38640/devtoo..., se:cdpVersion: 125.0.6422.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ea8ffae702b9942895b442f0e152de02)] -> id: modern]
+Session ID: ea8ffae702b9942895b442f0e152de02
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at com.codeborne.selenide.commands.Click.defaultClick(Click.java:97)
+at com.codeborne.selenide.commands.Click.click(Click.java:54)
+at com.codeborne.selenide.commands.Click.execute(Click.java:31)
+at com.codeborne.selenide.commands.Click.execute(Click.java:21)
+at com.codeborne.selenide.commands.Commands.execute(Commands.java:165)
+at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.codeborne.selenide.ex.InvalidStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingAlertPage -->
+        <test-method signature="testingDropdownPage()[pri:0, instance:testSuite.TestInteractWithSelectAndAlertFieldsSuite@645aa696]" started-at="2024-05-21T13:33:08 EEST" name="testingDropdownPage" description="Testing Dropdown page" finished-at="2024-05-21T13:33:14 EEST" duration-ms="6787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingDropdownPage -->
+        <test-method is-config="true" signature="shutsDownTheBrowser()[pri:0, instance:testSuite.TestInteractWithSelectAndAlertFieldsSuite@645aa696]" started-at="2024-05-21T13:33:14 EEST" name="shutsDownTheBrowser" finished-at="2024-05-21T13:33:15 EEST" duration-ms="702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutsDownTheBrowser -->
+      </class> <!-- testSuite.TestInteractWithSelectAndAlertFieldsSuite -->
+    </test> <!-- testSuite.TestInteractWithSelectAndAlertFieldsSuite -->
+  </suite> <!-- SuiteFortestSuite.TestInteractWithSelectAndAlertFieldsSuite -->
+</testng-results>

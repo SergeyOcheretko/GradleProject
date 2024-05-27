@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SuiteFortestSuite.TestInteractWithSelectAndAlertFieldsSuite]">
+  <test thread-count="5" name="testSuite.TestInteractWithSelectAndAlertFieldsSuite(failed)">
+    <classes>
+      <class name="testSuite.TestInteractWithSelectAndAlertFieldsSuite">
+        <methods>
+          <include name="setUpBeforeClassSelectAndAlert"/>
+          <include name="testingAlertPage"/>
+          <include name="beforeTest"/>
+          <include name="shutsDownTheBrowser"/>
+        </methods>
+      </class> <!-- testSuite.TestInteractWithSelectAndAlertFieldsSuite -->
+    </classes>
+  </test> <!-- testSuite.TestInteractWithSelectAndAlertFieldsSuite(failed) -->
+</suite> <!-- Failed suite [SuiteFortestSuite.TestInteractWithSelectAndAlertFieldsSuite] -->
