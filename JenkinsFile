@@ -2,45 +2,29 @@ pipeline {
     agent { label 'windows' }
 
     tools {
-        // Укажите метку вашей установки Gradle
-        gradle '7.2'
+        // Убедитесь, что Gradle установлен и указан правильно
+        gradle 'Gradle_7.2'  // Имя инструмента Gradle, как настроено в Jenkins
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Клонируем репозиторий
-                git url: 'https://github.com/SergeyOcheretko/GradleProject', branch: 'main'
-            }
-        }
-
         stage('Build') {
             steps {
-                // Выполняем сборку проекта
-                bat 'gradle clean build'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                // Запускаем тесты
-                bat 'gradle test'
-            }
-        }
-
-        stage('Archive Results') {
-            steps {
-                // Архивируем результаты сборки и тестов
-                archiveArtifacts artifacts: 'build/libs/**/*.jar', allowEmptyArchive: true
-                junit 'build/test-results/**/*.xml'
+                echo 'Starting the Build stage...'
+                bat 'gradle --version'  // Проверка версии Gradle
+                bat 'gradle clean build'  // Выполнение команды сборки Gradle
             }
         }
     }
 
     post {
         always {
-            // Выполняем действия после завершения пайплайна
-            cleanWs()
+            echo 'Pipeline finished.'
+        }
+        success {
+            echo 'Pipeline completed successfully.'
+        }
+        failure {
+            echo 'Pipeline failed.'
         }
     }
 }
