@@ -1,15 +1,13 @@
 pipeline {
-    agent { label 'windows' }
-
+    agent any
     stages {
         stage('Build') {
             steps {
                 echo 'Starting the Build stage...'
-                bat 'chcp 65001 && gradle build'
+                bat 'gradle build'
             }
         }
     }
-
     post {
         always {
             echo 'Pipeline finished.'
@@ -22,6 +20,7 @@ pipeline {
         }
     }
 }
+
 
 
 
