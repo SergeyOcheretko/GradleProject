@@ -1,15 +1,11 @@
 pipeline {
     agent { label 'windows' }
 
-    tools {
-        gradle 'Gradle_7.2'  // Имя инструмента Gradle, как настроено в Jenkins
-    }
-
     stages {
         stage('Build') {
             steps {
                 echo 'Starting the Build stage...'
-                bat 'gradle build'  // Измененная команда для выполнения задачи build
+                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.gradle.GradleInstallation\\Gradle_7.2\\bin\\gradle build'
             }
         }
     }
@@ -26,4 +22,5 @@ pipeline {
         }
     }
 }
+
 
