@@ -1,15 +1,13 @@
 pipeline {
     agent { label 'windows' }
 
-    options {
-        encoding 'UTF-8'  // Указываем UTF-8 как кодировку для скрипта
-    }
-
     stages {
         stage('Build') {
             steps {
                 echo 'Starting the Build stage...'
-                bat 'gradle build'  // Здесь используется ваша команда gradle
+                withEnv(['GRADLE_OPTS=-Dfile.encoding=UTF-8']) {
+                    bat 'gradle build'
+                }
             }
         }
     }
@@ -26,6 +24,7 @@ pipeline {
         }
     }
 }
+
 
 
 
