@@ -9,14 +9,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Starting the Build stage...'
-                // Вывод переменной окружения PATH для отладки
-                bat 'echo %PATH%'
-                // Проверка наличия файлов Gradle
-                bat 'dir C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.gradle.GradleInstallation\\Gradle_7.2\\bin'
-                // Проверка версии Gradle с полным путем
-                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.gradle.GradleInstallation\\Gradle_7.2\\bin\\gradle --version'
-                // Выполнение команды сборки с полным путем
-                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.gradle.GradleInstallation\\Gradle_7.2\\bin\\gradle clean build'
+                bat 'echo %PATH%'  // Вывод переменной окружения PATH для отладки
+                bat 'dir C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.gradle.GradleInstallation\\Gradle_7.2\\bin'  // Проверка наличия файлов Gradle
+                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.gradle.GradleInstallation\\Gradle_7.2\\bin\\gradle --version'  // Проверка версии Gradle с полным путем
+                // Выполнение команды сборки с полным путем и отладочными параметрами
+                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.gradle.GradleInstallation\\Gradle_7.2\\bin\\gradle clean build --info'
             }
         }
     }
