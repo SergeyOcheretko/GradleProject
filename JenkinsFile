@@ -1,16 +1,20 @@
 pipeline {
     agent any
+    environment {
+        // Устанавливаем кодировку
+        LANG = 'C.UTF-8'
+    }
     stages {
         stage('Build') {
             steps {
                 echo 'Starting the Build stage...'
-                // Выводим переменные среды
-                bat 'echo %PATH%'
-                // Проверяем доступность Gradle
-                bat 'gradle -v'
                 // Переходим в директорию проекта и выполняем сборку
                 dir('C:\\Users\\Sergey\\IdeaProjects\\GradleProject') {
-                    bat 'gradle build'
+                    bat '''
+                    @echo off
+                    chcp 65001
+                    gradle build
+                    '''
                 }
             }
         }
@@ -27,6 +31,7 @@ pipeline {
         }
     }
 }
+
 
 
 
