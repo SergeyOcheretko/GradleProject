@@ -4,9 +4,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Starting the Build stage...'
-                dir('C:\\Users\\Sergey\\IdeaProjects\\GradleProject') {
-                    bat 'gradle build'
-                }
+                bat 'echo %PATH%'
+                bat 'gradle -v'
+                bat 'gradle -b C:\\Users\\Sergey\\IdeaProjects\\GradleProject\\build.gradle build'
             }
         }
     }
@@ -22,6 +22,7 @@ pipeline {
         }
     }
 }
+
 
 
 
