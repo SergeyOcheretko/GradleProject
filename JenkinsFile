@@ -1,48 +1,24 @@
 pipeline {
     agent any
-    environment {
-        // Устанавливаем пути к Java JDK и Gradle
-        JAVA_HOME = 'C:\Program Files\Java\jdk-11.0.16.1'
-        GRADLE_HOME = 'C:\ProgramData\Jenkins\.jenkins\tools\hudson.plugins.gradle.GradleInstallation\Gradle_7.2\bin'
-        // Добавляем пути к Java и Gradle в переменную PATH
-        PATH = "${env.JAVA_HOME}\\bin;${env.GRADLE_HOME}\\bin;${env.PATH}"
-    }
+
     stages {
-        stage('Build') {
+        stage('Build and Test') {
             steps {
-                echo 'Starting the Build stage...'
-                // Проверка переменных среды и версии Gradle
-                dir('C:\\Users\\Sergey\\IdeaProjects\\GradleProject') {
-                    powershell '''
-                    $ErrorActionPreference = "Stop"
-                    Write-Host "Checking environment variables..."
-                    Write-Host "JAVA_HOME: $env:JAVA_HOME"
-                    Write-Host "GRADLE_HOME: $env:GRADLE_HOME"
-                    Write-Host "PATH: $env:Path"
-                    Write-Host "Checking Gradle version..."
-                    gradle -v
-                    Write-Host "Starting build..."
-                    gradle build
-                    '''
-                }
+                bat 'gradlew.bat clean build --stacktrace --info --debug'
             }
         }
     }
+
     post {
-        always {
-            echo 'Pipeline finished.'
-        }
         success {
-            echo 'Pipeline completed successfully.'
+            echo 'Build and tests completed successfully.'
         }
         failure {
-            echo 'Pipeline failed.'
+            echo 'Build or tests failed. Check logs for details.'
+            archiveArtifacts artifacts: '**/build/reports/tests/test/index.html', allowEmptyArchive: true
         }
     }
 }
-
-
-
 
 
 
