@@ -26,12 +26,12 @@ pipeline {
         stage('Allure Report') {
             steps {
                 echo 'Generating Allure Report...'
-                allure([
-                    includeProperties: false,
-                    jdk: '',
-                    reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'build/allure-results']] // Путь к результатам Allure
-                ])
+                // Генерация отчета Allure
+                bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat allureReport"
+                // Перемещение отчета Allure в корневую директорию проекта
+                bat "move /Y build\\reports\\allure-report ."
+                // Создание артефакта для отчета
+                archiveArtifacts artifacts: 'allure-report/**'
             }
         }
     }
@@ -47,13 +47,10 @@ pipeline {
         }
         always {
             // Очистка кеша Gradle
-            bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat cleanBuildCache"
-            // Очистка папки с результатами Allure
-            bat "rd /s /q build\\allure-results"
+            bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat clean"
         }
     }
 }
-
 
 
 
