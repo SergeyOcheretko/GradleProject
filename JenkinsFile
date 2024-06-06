@@ -14,8 +14,9 @@ pipeline {
                     echo "JAVA_HOME=${env.JAVA_HOME}"
                     echo "PATH=${env.PATH}"
 
-                    // Удаляем старые результаты Allure
-                    bat 'rd /s /q build\\allure-results'
+
+
+                    bat 'rmdir /s /q build\\allure-results'
 
                     bat """
                         @echo off
@@ -23,11 +24,6 @@ pipeline {
                         cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject
                         call gradlew.bat clean test --stacktrace --info
                     """
-
-                    // Проверяем, что директория с результатами существует
-                    if (!fileExists('build/allure-results')) {
-                        error 'Allure results directory not found!'
-                    }
                 }
             }
         }
@@ -64,10 +60,6 @@ pipeline {
             }
         }
     }
-}
-
-def fileExists(path) {
-    return file(path).exists()
 }
 
 
