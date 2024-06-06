@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.11.2'
+
 }
 
 group 'org.example'
@@ -8,9 +9,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    maven {
-        url 'https://repo.maven.apache.org/maven2'
-    }
 }
 
 dependencies {
@@ -21,14 +19,17 @@ dependencies {
     implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.17.0'
     testImplementation 'org.seleniumhq.selenium:selenium-firefox-driver:4.1.2'
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.13.0'
+
 }
+
+
 
 tasks.test {
     useTestNG()
 }
 
 allure {
-    version = '2.11.2'
+    version = '2.17.0' // Обновление версии Allure Commandline
     autoconfigure = true
     aspectjweaver = true
 }
