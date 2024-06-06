@@ -1,64 +1,43 @@
 pipeline {
     agent any
 
-    environment {
-        JAVA_HOME = "C:\\Program Files\\Java\\jdk-11.0.16.1"
-        PATH = "C:\\Windows\\System32;${JAVA_HOME}\\bin;${env.PATH}"
-    }
-
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Build and Test') {
             steps {
                 echo 'Building and testing the project...'
                 script {
-                    echo "JAVA_HOME=${env.JAVA_HOME}"
-                    echo "PATH=${env.PATH}"
-
-                    bat """
-                        @echo off
-                        echo Running Gradle Build
-                        cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject
-                        call gradlew.bat clean test --stacktrace --info
-                    """
+                    echo 'JAVA_HOME=C:\\Program Files\\Java\\jdk-11.0.16.1'
+                    echo 'PATH=C:\\Windows\\System32;C:\\Program Files\\Java\\jdk-11.0.16.1\\bin;C:\\sql_course\\dbhomeXE\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\apache-maven-3.8.6\\bin;C:\\Program Files\\allure-2.20.1\\bin;C:\\Program Files\\Cloudflare\\Cloudflare WARP\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.gradle.GradleInstallation\\Gradle_7.2\\bin;C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js\\Node.js command prompt.lnk;C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.gradle.GradleInstallation\\Gradle_7.2\\bin\\gradle;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+                    bat 'gradlew.bat build' // Замените на свою команду сборки
                 }
             }
         }
         stage('Allure Report') {
             steps {
                 echo 'Generating Allure Report...'
-                // Генерация отчета Allure
-                bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat allureReport"
-                script {
-                    // Проверяем существование директории allure-report
-                    def reportDir = file('C:\\Users\\Sergey\\IdeaProjects\\GradleProject\\build\\reports\\allure-report')
-                    if (reportDir.exists()) {
-                        // Перемещаем отчет Allure в корневую директорию проекта
-                        bat "move /Y build\\reports\\allure-report ."
-                        // Создаем артефакт для отчета
-                        archiveArtifacts artifacts: 'allure-report/**'
-                    } else {
-                        error 'Allure report directory not found or empty.'
-                    }
-                }
+                bat 'cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && gradlew.bat allureReport'
             }
         }
     }
 
     post {
-        success {
-            echo 'Build and tests completed successfully.'
+        always {
+            echo 'Cleaning up...'
+            bat 'cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && gradlew.bat clean'
+            archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
+            archiveArtifacts artifacts: '**/build/reports/allure-report/*', fingerprint: true
         }
         failure {
             echo 'Build or tests failed. Check logs for details.'
-            archiveArtifacts artifacts: '**/build/reports/tests/testng/index.html', allowEmptyArchive: true
-            archiveArtifacts artifacts: '**/build/allure-results/**', allowEmptyArchive: true
-        }
-        always {
-            // Очистка кеша Gradle
-            bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat clean"
         }
     }
 }
+
 
 
 
