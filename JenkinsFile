@@ -49,11 +49,6 @@ pipeline {
 }
 
 
-options {
-    scm {
-        scriptPath 'JenkinsFile'
-    }
-}
 
 
 
