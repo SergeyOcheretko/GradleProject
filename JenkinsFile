@@ -29,17 +29,12 @@ pipeline {
         always {
             echo 'Cleaning up...'
             bat 'cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && gradlew.bat clean'
-            archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
-            archiveArtifacts artifacts: '**/build/reports/allure-report/*', fingerprint: true
         }
         failure {
             echo 'Build or tests failed. Check logs for details.'
         }
     }
 }
-
-
-
 
 
 
