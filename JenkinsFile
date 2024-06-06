@@ -30,8 +30,8 @@ pipeline {
                 bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat allureReport"
                 script {
                     // Проверяем существование директории allure-report
-                    def reportDir = 'C:\\Users\\Sergey\\IdeaProjects\\GradleProject\\build\\reports\\allure-report'
-                    if (file(reportDir).exists()) {
+                    def reportDir = file('C:\\Users\\Sergey\\IdeaProjects\\GradleProject\\build\\reports\\allure-report')
+                    if (reportDir.exists()) {
                         // Перемещаем отчет Allure в корневую директорию проекта
                         bat "move /Y build\\reports\\allure-report ."
                         // Создаем артефакт для отчета
@@ -59,6 +59,7 @@ pipeline {
         }
     }
 }
+
 
 
 
