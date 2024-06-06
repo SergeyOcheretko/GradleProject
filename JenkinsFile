@@ -36,21 +36,27 @@ pipeline {
         }
     }
 
-    post {
-        success {
-            echo 'Build and tests completed successfully.'
-        }
-        failure {
-            echo 'Build or tests failed. Check logs for details.'
-            archiveArtifacts artifacts: '**/build/reports/tests/testng/index.html', allowEmptyArchive: true
-            archiveArtifacts artifacts: '**/build/allure-results/**', allowEmptyArchive: true
-        }
-        always {
-            // Очистка кеша Gradle
-            bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat cleanBuildCache"
+post {
+    success {
+        echo 'Build and tests completed successfully.'
+    }
+    failure {
+        echo 'Build or tests failed. Check logs for details.'
+        archiveArtifacts artifacts: '**/build/reports/tests/testng/index.html', allowEmptyArchive: true
+        archiveArtifacts artifacts: '**/build/allure-results/**', allowEmptyArchive: true
+    }
+    always {
+        // Очистка кеша Gradle
+        script {
+            try {
+                bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat cleanBuildCache"
+            } catch (Exception e) {
+                echo "Failed to clean Gradle cache: ${e.message}"
+            }
         }
     }
 }
+
 
 
 
