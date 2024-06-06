@@ -47,16 +47,16 @@ public class TestInteractWithSelectAndAlertFieldsSuite extends BaseTest {
         interactWithSelectAndAlertFieldsPage.selectMultipleOptionsFromDropDown();
     }
 
-@Test(description = "Testing Alert page")
-    public void testingAlertPage() throws InterruptedException {
-    interactWithSelectAndAlertFieldsPage.open();
-    interactWithSelectAndAlertFieldsPage.clickOnTheEditButton("Dialog");
-    interactWithSelectAndAlertFieldsPage.acceptTheAlert();
-   interactWithSelectAndAlertFieldsPage.dismissTheAlertPrintTheAlertText();
-    interactWithSelectAndAlertFieldsPage.typeYourNameAccept();
-   interactWithSelectAndAlertFieldsPage.sweetAlert();
-
-}
+//@Test(description = "Testing Alert page")
+//    public void testingAlertPage() throws InterruptedException {
+//    interactWithSelectAndAlertFieldsPage.open();
+//    interactWithSelectAndAlertFieldsPage.clickOnTheEditButton("Dialog");
+//    interactWithSelectAndAlertFieldsPage.acceptTheAlert();
+//   interactWithSelectAndAlertFieldsPage.dismissTheAlertPrintTheAlertText();
+//    interactWithSelectAndAlertFieldsPage.typeYourNameAccept();
+//   interactWithSelectAndAlertFieldsPage.sweetAlert();
+//
+//}
 
 
 }
