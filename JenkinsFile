@@ -14,9 +14,6 @@ pipeline {
                     echo "JAVA_HOME=${env.JAVA_HOME}"
                     echo "PATH=${env.PATH}"
 
-                    // Удаляем старые результаты Allure, если они существуют
-                    bat 'if exist build\\allure-results rmdir /s /q build\\allure-results'
-
                     bat """
                         @echo off
                         echo Running Gradle Build
@@ -35,8 +32,6 @@ pipeline {
                     reportBuildPolicy: 'ALWAYS',
                     results: [[path: 'build/allure-results']] // Путь к результатам Allure
                 ])
-                // Выводим содержимое директории с результатами
-                bat 'dir build\\allure-results'
             }
         }
     }
@@ -52,13 +47,9 @@ pipeline {
         }
         always {
             // Очистка кеша Gradle
-            script {
-                try {
-                    bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat cleanBuildCache"
-                } catch (Exception e) {
-                    echo "Failed to clean Gradle cache: ${e.message}"
-                }
-            }
+            bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat cleanBuildCache"
+            // Очистка папки с результатами Allure
+            bat "rd /s /q build\\allure-results"
         }
     }
 }
