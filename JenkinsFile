@@ -14,9 +14,8 @@ pipeline {
                     echo "JAVA_HOME=${env.JAVA_HOME}"
                     echo "PATH=${env.PATH}"
 
-
-
-                    bat 'rmdir /s /q build\\allure-results'
+                    // Удаляем старые результаты Allure, если они существуют
+                    bat 'if exist build\\allure-results rmdir /s /q build\\allure-results'
 
                     bat """
                         @echo off
@@ -61,6 +60,7 @@ pipeline {
         }
     }
 }
+
 
 
 
