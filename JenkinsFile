@@ -1,10 +1,37 @@
 pipeline {
     agent any
 
+    environment {
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-11.0.16.1"
+        PATH = "C:\\Windows\\System32;${JAVA_HOME}\\bin;${env.PATH}"
+    }
+
     stages {
         stage('Build and Test') {
             steps {
-                bat 'gradlew.bat clean build --stacktrace --info --debug'
+                echo 'Building and testing the project...'
+                script {
+                    echo "JAVA_HOME=${env.JAVA_HOME}"
+                    echo "PATH=${env.PATH}"
+
+                    bat """
+                        @echo off
+                        echo Running Gradle Build
+                        cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject
+                        call gradlew.bat clean test --stacktrace --info --debug
+                    """
+                }
+            }
+        }
+        stage('Allure Report') {
+            steps {
+                echo 'Generating Allure Report...'
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'build/allure-results']] // Путь к результатам Allure
+                ])
             }
         }
     }
@@ -15,12 +42,11 @@ pipeline {
         }
         failure {
             echo 'Build or tests failed. Check logs for details.'
-            archiveArtifacts artifacts: '**/build/reports/tests/test/index.html', allowEmptyArchive: true
+            archiveArtifacts artifacts: '**/build/reports/tests/testng/index.html', allowEmptyArchive: true
+            archiveArtifacts artifacts: '**/build/allure-results/**', allowEmptyArchive: true
         }
     }
 }
-
-
 
 
 
