@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.11.2'
+    id 'com.diffplug.spotless' version '5.14.2'
 }
 
 group 'org.example'
@@ -21,7 +22,12 @@ dependencies {
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.13.0'
 
 }
-
+spotless {
+    java {
+        target 'src/**/*.java'
+        googleJavaFormat() // или другой формат, если требуется
+    }
+}
 
 
 tasks.test {
