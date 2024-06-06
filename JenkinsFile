@@ -28,10 +28,17 @@ pipeline {
                 echo 'Generating Allure Report...'
                 // Генерация отчета Allure
                 bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat allureReport"
-                // Перемещение отчета Allure в корневую директорию проекта
-                bat "move /Y build\\reports\\allure-report ."
-                // Создание артефакта для отчета
-                archiveArtifacts artifacts: 'allure-report/**'
+                script {
+                    // Проверяем существование директории allure-report
+                    if (fileExists('C:\\Users\\Sergey\\IdeaProjects\\GradleProject\\build\\reports\\allure-report')) {
+                        // Перемещаем отчет Allure в корневую директорию проекта
+                        bat "move /Y build\\reports\\allure-report ."
+                        // Создаем артефакт для отчета
+                        archiveArtifacts artifacts: 'allure-report/**'
+                    } else {
+                        error 'Allure report directory not found or empty.'
+                    }
+                }
             }
         }
     }
@@ -50,6 +57,10 @@ pipeline {
             bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat clean"
         }
     }
+}
+
+def fileExists(path) {
+    return file(path).exists()
 }
 
 
