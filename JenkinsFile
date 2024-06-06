@@ -45,7 +45,7 @@ pipeline {
         }
         failure {
             echo 'Build or tests failed. Check logs for details.'
-            archiveArtifacts artifacts: '**/build/reports/tests/testng/index.html', allowEmptyArchive: true
+            archiveArtifacts artifacts: '**/build/reports/tests/test/index.html', allowEmptyArchive: true
             archiveArtifacts artifacts: '**/build/allure-results/**', allowEmptyArchive: true
         }
         always {
