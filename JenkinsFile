@@ -23,6 +23,11 @@ pipeline {
                         cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject
                         call gradlew.bat clean test --stacktrace --info
                     """
+
+                    // Проверяем, что директория с результатами существует
+                    if (!fileExists('build/allure-results')) {
+                        error 'Allure results directory not found!'
+                    }
                 }
             }
         }
@@ -61,8 +66,9 @@ pipeline {
     }
 }
 
-
-
+def fileExists(path) {
+    return file(path).exists()
+}
 
 
 
