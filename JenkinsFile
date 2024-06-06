@@ -18,7 +18,7 @@ pipeline {
                         @echo off
                         echo Running Gradle Build
                         cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject
-                        call gradlew.bat clean test --stacktrace --info --debug
+                        call gradlew.bat clean test --stacktrace --info
                     """
                 }
             }
@@ -47,7 +47,6 @@ pipeline {
         }
     }
 }
-
 
 
 
