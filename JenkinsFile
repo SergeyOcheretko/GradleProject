@@ -45,9 +45,12 @@ pipeline {
             archiveArtifacts artifacts: '**/build/reports/tests/testng/index.html', allowEmptyArchive: true
             archiveArtifacts artifacts: '**/build/allure-results/**', allowEmptyArchive: true
         }
+        always {
+            // Очистка кеша Gradle
+            bat "cd C:\\Users\\Sergey\\IdeaProjects\\GradleProject && call gradlew.bat cleanBuildCache"
+        }
     }
 }
-
 
 
 
