@@ -14,6 +14,9 @@ pipeline {
                     echo "JAVA_HOME=${env.JAVA_HOME}"
                     echo "PATH=${env.PATH}"
 
+                    // Удаляем старые результаты Allure
+                    bat 'rd /s /q build\\allure-results'
+
                     bat """
                         @echo off
                         echo Running Gradle Build
@@ -57,10 +60,6 @@ pipeline {
         }
     }
 }
-
-
-
-
 
 
 
